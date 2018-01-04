@@ -4,8 +4,8 @@
 - 简单地说，本方案采用了2个硬盘，每个硬盘各安装一个操作系统，然后利用Grub2管理系统的启动引导。
 - 安装中需要注意以下几点：
   - 应该先安装 Windows 10，再安装Ubuntu。这一次 Windows 10 安装在了磁盘1上，Ubuntu安装在了磁盘2上。
-  - 在安装Ubuntu时，应该会有提示说检测到有windows manager， 这样的话 Grub2会自动将其添加到启动菜单里。
-  - 在安装Ubuntu时，最好为/boot单独分割一个区(大小为200MB-500MB),用来安装Ubuntu的引导文件，即Grub2。
+  - 在安装Ubuntu时，应该会有提示说检测到有windows manager， 这样的话 Grub2会自动将其添加到启动菜单里。
+  - 在安装Ubuntu时，最好为/boot单独分割一个区(大小为200MB-500MB),用来安装Ubuntu的引导文件，即Grub2。
   - 此次 Ubuntu 的具体分区设置为： /boot： 200MB, /：大约180GB, swap: 16GB(和机器的内存数量差不多)。
 
 
