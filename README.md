@@ -9,9 +9,7 @@
   - 此次 Ubuntu 的具体分区设置为： /boot： 200MB, /：大约180GB, swap: 16GB(和机器的内存数量差不多)。
 #### 补充：修改Grub2的菜单中启动项的顺序
 - grub2是由/etc/grub.d/目录下的文件名称顺序来决定启动项的顺序的。因此改变文件名排序就可以改变启动项排序了。
-  - 若要将 Windows 10 的启动项放在 Ubuntu 前面，则需要将 30_os-prober 的文件名中的 30 改为 06～09之间的任何数字即可。
-  
-  for example:
+  - 若要将 Windows 10 的启动项放在 Ubuntu 前面，则需要将 30_os-prober 的文件名中的 30 改为 06～09之间的任何数字即可。for example:
   
       $sudo mv /etc/grub.d/30_os-prober /etc/grub.d/06_os-prober
 
