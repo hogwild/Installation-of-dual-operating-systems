@@ -8,6 +8,6 @@
   - 在安装Ubuntu时，最好为/boot单独分割一个区(大小为200MB-500MB),用来安装Ubuntu的引导文件，即Grub2。
   - 此次 Ubuntu 的具体分区设置为： /boot： 200MB, /：大约180GB, swap: 16GB(和机器的内存数量差不多)。
 #### 额外的情况：VPN无法上Google的原因及解决方案
-- 安装完系统之后，在Ubuntu中设置了学校的VPN(vpn-ct.shanghai.nyu.edu)可以顺利访问BBC等网站，但就是不能访问google下属的网站，比如 www.google.com，facebook, youtobe 等。分别ping google.com, ping google的主机IP，发现后者可以链接，但是前者却一直在变换，由此判断是DSN解析出了问题。于是，修改了 /etc/resolv.conf 将DNS 换成了8.8.8.8。问题解决。 [参考链接](http://www.yubosun.com/tech/ubntu-dns-reset.htm)
+- 安装完系统之后，在Ubuntu中设置了学校的VPN(vpn-ct.shanghai.nyu.edu)可以顺利访问BBC等网站，但就是不能访问google下属的网站，比如 www.google.com， facebook, youtobe 等。分别ping google.com, ping google的主机IP，发现后者可以链接，但是前者却一直在变换，由此判断是DSN解析出了问题。于是，修改了 /etc/resolv.conf 将DNS 换成了8.8.8.8。问题解决。 [参考链接](http://www.yubosun.com/tech/ubntu-dns-reset.htm)
 
 
