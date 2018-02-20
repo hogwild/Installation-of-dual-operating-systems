@@ -19,10 +19,10 @@
 
 #### 额外的情况：VPN无法上Google的原因及解决方案
 - 安装完系统之后，在Ubuntu中设置了学校的VPN(vpn-ct.shanghai.nyu.edu)可以顺利访问BBC等网站，但就是不能访问google下属的网站，比如 www.google.com， facebook, youtube 等。分别ping google.com, ping google的主机IP，发现后者可以链接，但是前者却一直在变换，由此判断是DSN解析出了问题。于是，修改了 /etc/resolv.conf 将DNS 换成了8.8.8.8。问题解决。 [参考链接](http://www.yubosun.com/tech/ubntu-dns-reset.htm)
-具体步骤：
-1 在/etc/network/interfaces中最后增加一行：dns-nameservers 8.8.8.8
-2 在/etc/resolvconf/resolv.conf.d/base中增加：nameserver 8.8.8.8
-3 执行 resolvconf -u
+具体步骤：  
+ 1 在/etc/network/interfaces中最后增加一行：dns-nameservers 8.8.8.8
+ 2 在/etc/resolvconf/resolv.conf.d/base中增加：nameserver 8.8.8.8
+ 3 执行 resolvconf -u
 即可生效，并且重启之后也不会有影响。
 
 
